@@ -1,0 +1,1 @@
+  This theme was built using Gatsby and the Novela theme. For more information visit the [Gatsby documentation](https://www.gatsbyjs.org/docs/) and the [novela theme repository](https://github.com/narative/gatsby-theme-novela).
