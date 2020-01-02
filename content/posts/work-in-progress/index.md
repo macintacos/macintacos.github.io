@@ -1,6 +1,7 @@
 ---
-title: WIP
+title: The macinplanck; My EZ Planck Configuration
 date: 2020-01-01
+slug: macinplanck-configuration
 tags: ['post', 'qmk']
 ---
 
@@ -16,7 +17,7 @@ Some front-matter before I get into things:
 Here are links to my current configuration:
 
 - [Planck EZ Configurator (my current, full setup)](https://configure.ergodox-ez.com/planck-ez/layouts/K0rgz/OvZ4W/0)
-- Relevant [`.bin`](https://github.com/macintacos/dotfiles/blob/master/keebs/macinplanck-ez/planck_ez_macinplanck_K0rgz_OvZ4W.bin), [source](https://github.com/macintacos/dotfiles/tree/master/keebs/macinplanck-ez/planck_ez_macinplanck_source), and [PDF](https://github.com/macintacos/dotfiles/blob/master/keebs/macinplanck-ez/macinplanck-keymap.pdf) files for my current layout (hosted on [GitHub](https://github.com/macintacos/dotfiles/tree/master/keebs/macinplanck-ez))
+- [Relevant `.bin`, source, and PDF files](https://github.com/macintacos/dotfiles/tree/master/keebs/macinplanck-ez) for my current layout.
 
 ...and here are resources that I used to configure my setup:
 
@@ -45,12 +46,12 @@ A lot of this layer is the same as the default config. QWERTY layout, `lower`/`r
 
 - `Hyper` is replaced with `TG(4)`, which brings you to the `NORMAL` layer.
 - `Esc` is mapped to the equivalent of `LCTRL(KC_ESC)`, which means:
-  - _Tap_ -\> `Esc`
-  - _Hold_ -\> Left Control (modifier)
+  - _Tap_ -> `Esc`
+  - _Hold_ -> Left Control (modifier)
   - This is how it should be _on every keyboard_, don't @ me.
 - `Tab` is mapped to the equivalent of `MEH_T(KC_TAB)`, which means:
-  - _Tap_ -\> `Tab`
-  - _Hold_ -\> Meh (Left control, Shift, and Alt)
+  - _Tap_ -> `Tab`
+  - _Hold_ -> Meh (Left control, Shift, and Alt)
   - This is done this way because I have many macros defined via [Keyboard Maestro](https://www.keyboardmaestro.com/) that launch applications by performing `Meh+<some-character>` (like [this](https://p-37FYgJ.b1.n0.cdn.getcloudapp.com/items/nOumPopW/Image+2020-01-01+at+18.11.20.png?v=5a50d59d1536b04cf63f96443b383652)).
 - The `Lower` and `Raise` keys have been changed to `TT(LOWER)` and `TT(RAISE)`, respectively. This was done because of a couple of things:
   - Sometimes I like to stop and think about what numbers/symbols I'm going to use, and sometimes I know exactly what I want to do and then move on with typing. `TT()` suited this better; if you tap the key it'll bring you to the associated layer and then stay there, but if you _hold_ the key, you'll only activate the layer for as long as you hold the key (essentially, the default behavior of these keys).
