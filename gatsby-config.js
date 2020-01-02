@@ -1,48 +1,69 @@
 module.exports = {
   siteMetadata: {
-    title: `macintacos`,
-    name: `Julian Torres`,
-    siteUrl: `https://macintacos.github.io`,
-    description: `Still figuring things out.`,
-    hero: {
-      heading: `hey.`,
-      maxWidth: 652
-    },
+    siteTitle: 'macintacos',
+    siteDescription: 'this is a place where I occasionally write stuff',
+    siteImage: '/banner.png', // main image of the site for metadata
+    siteUrl: 'https://macintacos.github.io/',
+    pathPrefix: '/',
+    siteLanguage: 'en',
+    ogLanguage: `en_US`,
+    author: 'Julian Torres', // for example - 'Ivan Ganev'
+    authorDescription: 'this is a place where I occasionally write stuff', // short text about the author
+    avatar: '/avatar.jpg',
+    twitterSite: 'https://twitter.com/macintacos', // website account on twitter
+    twitterCreator: '', // creator account on twitter
     social: [
       {
-        name: `twitter`,
+        icon: `twitter`,
         url: `https://twitter.com/macintacos`
       },
       {
-        name: `github`,
+        icon: `github`,
         url: `https://github.com/macintacos`
       }
     ]
   },
   plugins: [
     {
-      resolve: "@narative/gatsby-theme-novela",
+      resolve: 'gatsby-theme-chronoblog',
       options: {
-        contentPosts: "content/posts",
-        contentAuthors: "content/authors",
-        basePath: "/",
-        authorsPage: true,
-        sources: {
-          local: true
-          // contentful: true,
+        uiText: {
+          // ui text fot translate
+          feedShowMoreButton: 'show more',
+          feedSearchPlaceholder: 'search',
+          cardReadMoreButton: 'read more →',
+          allTagsButton: 'all tags'
+        },
+        feedItems: {
+          // global settings for feed items
+          limit: 50,
+          yearSeparator: false,
+          yearSeparatorSkipFirst: true,
+          contentTypes: {
+            links: {
+              beforeTitle: '🔗 '
+            }
+          }
+        },
+        feedSearch: {
+          symbol: '🔍'
         }
       }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `macintacos`,
+        name: `Chronoblog Gatsby Theme`,
+        short_name: `Chronoblog`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#fff`,
+        theme_color: `#3a5f7d`,
         display: `standalone`,
         icon: `src/assets/favicon.png`
       }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`
     }
   ]
 };
