@@ -5,7 +5,7 @@ slug: macinplanck-configuration
 tags: ['post', 'qmk']
 ---
 
-As a christmas gift to myself, I decided to get a new keyboard; a keyboard that I had scoffed at using not too long ago because "lol where's all the keys?". That keyboard is the [Planck EZ Glow](https://ergodox-ez.com/pages/planck). This post is to describe how I have it setup, not to give a whole backstory as to why I decided to get it (that's for me and my journal to know, thank you very much). I affectionately refer to my keyboard as the **macinplanck**.
+As a Christmas gift to myself, I decided to get a new keyboard; a keyboard that I had scoffed at using not too long ago because "lol where's all the keys?". That keyboard is the [Planck EZ Glow](https://ergodox-ez.com/pages/planck). This post is to describe how I have it setup, not to give a whole backstory as to why I decided to get it (that's for me and my journal to know, thank you very much). I affectionately refer to my keyboard as the **macinplanck**.
 
 Some front-matter before I get into things:
 
@@ -81,9 +81,9 @@ The last "big thing" to note here (because it's common in other layers too) is t
 
 Other things to note here:
 
-- I removed all `F#` keys, since I basically never use them.
+- I removed all function keys, since I basically never use them.
 - I removed various other keys like `PgUp`/`PgDown` because I don't really find them to be all that useful (I have other shortcuts that accomplish the same thing) and I don't think that I'd use the Non-US characters.
-- I brought back `Enter` and `Backspace` because they "made sense" to keep (I was gaining nothing by having them removed)
+- I brought back `Enter` and `Backspace` because they "made sense" to keep (I was gaining nothing by having them removed like it is in the default configuration).
 - I persisted the same modifier keys from the `Base` layer into both layers because I have a lot of application-specific shortcuts that rely on using these modifiers in conjunction with characters/symbols that are in these layers.
 
 3 layers down, 9 to go.
@@ -98,13 +98,13 @@ I have the least to say about this layer. Note that we have the same "escape hat
 
 ![normal layer](./4-normal.png)
 
-You get to the `NORMAL` layer by tapping the `QMK` key at the bottom-left of the `Base` layer. This is where things get a bit more interesting, and where Vim's influence started getting the best of me.
+You get to the `NORMAL` layer by tapping the QMK key at the bottom-left of the `Base` layer. This is where things get a bit more interesting, and where Vim's influence started getting the best of me.
 
-This layer is called `NORMAL` because, if you're in a text field that _isn't_ Vim (which happens more often than I would like), this layer gives some basic Vim motions that allow you to navigate text with this layer.
+This layer is called `NORMAL` because, if you're in a text field that _isn't_ Vim (which happens more often than I would like), this layer gives some basic Vim motions that allow you to navigate text easily using shortcuts that are native to the OS.
 
-An important thing to call out is that, although it's called `NORMAL`, this isn't mean to be the layer that you're always in, which is the case a lot of the time when you're in an actual Vim buffer. I had considered that approach, but then it got in the way of doing _actual_ Vim editing. So, even though in a conceptual sense I try to consider the `Base` layer analogous to `INSERT` mode, they're still two very distinct concepts that shouldn't be intermingled. If I'm in an actual Vim buffer, I ignore these layers altogether and always return to `Base`, since the other layers wouldn't make a lot of sense to use in place of honest-to-goodness Vim keybindings.
+An important thing to call out is that, although it's called `NORMAL`, this isn't meant to be the layer that you're always in (which is common when you're in an actual Vim buffer). I had considered making this the `Base` layer, but then it got in the way when editing in "real" Vim. So, even though in a conceptual sense I try to consider the `Base` layer analogous to `INSERT` mode, they're still two very distinct concepts that shouldn't be intermingled. If I'm in an actual Vim buffer, I ignore these layers altogether and always return to `Base`, since the other layers wouldn't make a lot of sense to use in place of honest-to-goodness Vim keybindings.
 
-[Here is the key mapping for the `NORMAL` layer as it stands now.](https://gist.github.com/macintacos/7e06f9f9a008606178f623a019c33239) (anything not shown can be assumed to be "None"). Scroll down to the "Special Mention: RGB Handling" section to understand what the colors mean.
+[Here is the key mapping for the `NORMAL` layer as it stands now](https://gist.github.com/macintacos/7e06f9f9a008606178f623a019c33239) (anything not shown can be assumed to be "None"). Scroll down to the "Special Mention: RGB Handling" section to understand what the colors mean.
 
 ### The `VISUAL` Layer
 
@@ -118,7 +118,7 @@ The `VISUAL` layer is meant to be the layer that performs selection-based action
 
 ![nrmlshft layer](./6-nrmlshft.png)
 
-The `NRMLSHFT` layer is only accessible from the `NORMAL` layer and, as it implies, it contains actions that are analogous to "shifted" keys in Vim's `NORMAL` mode. I didn't do a whole lot of customization here, and there are probably some actions that I've missed; I'll slowly add them as I discover them.
+The `NRMLSHFT` layer is only accessible from the `NORMAL` layer and, as the name implies, it contains actions that are analogous to "shifted" keys in Vim's `NORMAL` mode (like `X` or `G`). I didn't do a whole lot of customization here, and there are probably some actions that I've missed; I'll slowly add more as I discover them.
 
 [Here is the keymapping for this layer.](https://gist.github.com/macintacos/415a5131236fe94abbf7f23e5541b0e7)
 
@@ -126,27 +126,29 @@ The `NRMLSHFT` layer is only accessible from the `NORMAL` layer and, as it impli
 
 ![windowz layer](./7-windowz.png)
 
-This layer doesn't make much sense to the casual onlooker, mostly because this layer is used for exclusively for my window management tool on macOS: [Rectangle](https://github.com/rxhanson/Rectangle). I tile/move/resize my windows on macOS all day thanks to this tool. It's invaluable enough for me that I've dedicated an entire layer to it. The above keymap makes more sense when you see how the keyboard shortcuts for that application are set up on my machine:
+This layer doesn't make much sense to the casual onlooker, mostly because it is used exclusively for my window management tool on macOS: [Rectangle](https://github.com/rxhanson/Rectangle). I tile/move/resize my windows on macOS all day thanks to this tool. It's invaluable enough for me that I've dedicated an entire layer to it. The above keymap makes more sense when you see how the keyboard shortcuts for that application are set up on my machine:
 
 ![rectangle keymap](./rectangle-keymap.png)
 
-[Here's the keymapping for this layer.](https://gist.github.com/macintacos/3644540f41009cd56eeac0537d305fe9)
+That's all there is to the `WINDOWZ` layer! [Here's the keymapping.](https://gist.github.com/macintacos/3644540f41009cd56eeac0537d305fe9)
 
 ### The `LGUI_ALL` Layer
 
 ![lgui_all layer](./8-lgui-all.png)
 
-The sole reason why `LGUI_ALL` exists is because, when I was in `NORMAL` or `VISUAL` mode, I occasionally found myself wanting to perform some kind of modifier + _"regular" key_ combination, but then stay on the current layer. This is an incredibly brute-forced approach to handling that need, and is definitely something that I'll come back and revisit in the near future. For now, it works fine, so I'm not really worried. If you have any suggestions for an approach to this, I'm all ears!
+This layer is an example of pure laziness on my part. The only reason why `LGUI_ALL` exists is because, when I was in the `NORMAL` or `VISUAL` layers, I occasionally found myself wanting to perform some kind of modifier + _"regular" key_ combination (almost always `cmd + something`), but then stay on the current layer. This is an incredibly brute-forced approach to handling that need, and is definitely something that I'll come back and revisit in the near future. For now, it works fine, so I'm not really worried. If you have any suggestions for an approach to this, I'm all ears!
 
-I didn't create a keymapping for this because it's simply a layer that has `cmd` prepended to all the keys on the keyboard (i.e. `cmd+q`, `cmd+w`, etc.).
+I didn't create a keymap gist for this because it's simply a layer that has `cmd` prepended to all the keys on the keyboard (i.e. `cmd+q`, `cmd+w`, etc.).
 
 ### Special Mention: RGB Handling
 
-I didn't mention the colors yet, simply because the Planck layout is so much more intuitive once you start adding color that has meaning. So I'll get into that now.
+Each layer has what you'd call a "dominant" color that signifies what layer you're in. If you were to tap/hold/whatever a key that is illuminated with the color that is dominant for that layer, you are guaranteed to _not_ be kicked out of that layer.
 
-Each layer has what you'd call a "dominant" color, that signifies what layer you're in. If you were to tap/hold/whatever a key that is illuminated with the color that is dominant, you are guaranteed to _not_ be kicked out of that layer. The same logic applies if there is a key with a color that is not dominant for the layer you're on; if you tap a key that is not dominant, you should be taken to a layer where that key you pressed _is_ dominant. The only layers where there are no other colors that signify other layers are `NRMLSHIFT` and `LGUI_ALL`; this is because the only way to get into those layers is by holding an `MO()` key, and once you release that key you're back on the layer that you started with.
+The same logic applies if there is a key with a color that is "not" dominant for the layer you're on; if you tap a key that is not dominant, you should be taken to a layer where the color of the key you pressed _is_ dominant.
 
-Here are the colors that I used for this layout (colors are taken from the per-key color options in the configurator):
+The only layers where there are no other colors that signify other layers are `NRMLSHIFT` and `LGUI_ALL`; this is because the only way to get into those layers is by holding an `MO()` key, and once you release that key you're back on the layer that you started with. No need for an "escape hatch" in those layers.
+
+Here are the colors that I used for this layout (colors are taken from the per-key color options in the Oryx configurator):
 
 | Layer        | Color                             |
 | ------------ | --------------------------------- |
@@ -166,17 +168,17 @@ Here are the colors that I used for this layout (colors are taken from the per-k
 
 After going through all of this, I've got some feedback.
 
-- The Wally GUI application was a tad more unreliable than I would've liked. The `wally-cli` CLI tool was rock solid, though, and I've been using that for all of my flashing.
+- The Wally GUI application was a tad more unreliable than I would've liked. Sometimes I would go to flash the board, the app would hang, and then _every keyboard I used wouldn't work until I rebooted_. The `wally-cli` CLI tool was rock solid, though, and I've been using that for all of my flashing. Your mileage may vary.
 - Especially when I was in the midst of changing colors, I found it basically impossible to tell what color was already used from the per-key palettes when you selected a key. It'd be great if, when you selected a key in the UI, it'd also tell you what color you've assigned to that key.
-- The UI disables the key that got you to the layer in question. This makes sense for layer actions like `MO()`, because the layer is only active when you are actively holding the key that got you there. However, for layer functions like `TT()` or `OSL()`, it's perfectly fine to lift your finger off the key that got you into that layer, freeing that key up for other actions. Unfortunately, the Oryx configurator doesn't distinguish these layer functions, and leaves them disabled in the destination layer regardless of what function type got you there. This made things like a `gg` motion in the `NORMAL` layer (which I would've mapped to `cmd+up`) pretty much impossible.
+- The `OSL()` layer action can bring you to a layer, but it disables the key in that layer. This makes sense for layer actions like `MO()`, because the layer is only active when you are actively holding the key that got you there. However, for layer functions like `OSL()`, it's perfectly fine to lift your finger off the key that got you into that layer, freeing that key up for other actions. This made things like a `gg` motion in the `NORMAL` layer (which I would've mapped to `cmd+up`) much more clumsy to implement with the UI, so I didn't bother.
 
 ## What's next?
 
-There are already multiple things that I want to improve upon.
+There are already multiple things that I want to improve upon for this layout.
 
-- Add some more actions into the `Adjust` layer; I basically didn't modify it heavily because I couldn't think of anything, so this is ripe for improvement.
-- Come up with some more common vim motions that I can accomplish without getting into macros; at a certain point, getting into macros will be inevitable, but using the GUI tool is so much easier than editing code (IMO) that I'm going to dread when I have to switch over.
-- Mess around with creating more complex macros. There were a few chords/motions that I created that definitely could have been more cleanly be defined via macros, and that's probably the next thing that I'd get around to messing around with.
+- Add some more actions into the `Adjust` layer; I basically ignored it heavily because I couldn't think of anything, so this is ripe for improvement.
+- Come up with some more common Vim motions that I can accomplish without getting into macros; at a certain point, getting into macros will be inevitable, but using the GUI tool is so much easier than editing the keymap code (IMO) that I'm going to dread when I have to switch over.
+- Once I exhaust all available options to me in the UI, I want to start messing around with creating more complex [macros](https://docs.qmk.fm/#/feature_macros). There were a few chords/motions that I created that definitely could have been more cleanly defined via macros, and that's probably the next thing that I'd get around to messing aroun
 - I want to investigate using [leader keys with QMK](https://beta.docs.qmk.fm/features/feature_leader_key). Especially coming from Spacemacs, this capability made me salivate; but I knew that it would be an unending hole of complexity and opportunities that I just avoided it altogether. Maybe the next time I have 5 solid days of playing around, I'll do it, but right now... nope.
 
 Anyway, that about wraps this up. For those of you that made it to the end, you get a virtual pat on the back, and permission to go and have a cookie!
