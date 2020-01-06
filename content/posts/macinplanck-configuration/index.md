@@ -52,7 +52,7 @@ I currently have 9 layers (`Lower`, `Base`, `Raise`, `Adjust`, `NORMAL`, `VISUAL
 
 ![](https://p-37FYgJ.b1.n0.cdn.getcloudapp.com/items/E0uEA9B5/Image+2020-01-01+at+17.04.16.png?v=01081508789b9b85ad9ebb151b1e22af)
 
-Not the biggest of drawbacks, but for whatever reason you cannot edit the names if the first four tabs, or delete them. Removing the ability to delete them was understandable (otherwise it's kinda not a Planck), but the inability to rename them didn't really make sense to me. Oh well!
+Not the biggest of drawbacks, but for whatever reason you cannot edit or delete the names in the first four layers. Removing the ability to delete them is understandable (otherwise it's kinda not a Planck), but the inability to rename them didn't really make sense to me. Oh well!
 
 I'll be going through the `Base` layer first, just because that makes sense in my head, and move through all of the other layers sequentially.
 
@@ -92,7 +92,7 @@ It helps to explain these both at the same time because there are a lot of simil
 
 Also, any action that I explicitly didn't set in a given layer, I marked it as "None". This was done because, by default, the Oryx configurator marks other keys in the layer "transparent" to let the key fall through to the `Base` layer. I do this in all layers except the `Base` layer (that layer is full anyway, so it doesn't matter). This was done because I didn't want to encounter any behavior that I didn't explicitly program. The `TT()` keys are not set to "None" because they still have a function; pressing one of those keys again will take you into the `Adjust` layer or will take you back to the `Base` layer, depending on which layer you're in.
 
-The last "big thing" to note here (because it's common in other layers too) is that at this point, I've designated the ESC key as my "escape hatch" in all layers that could be considered "not transient" (meaning that I can press a key and that layer could remain active ever if I release the key). This key is mapped to `TO(1)` everywhere that is relevant, which brings you back to the `Base` layer. There are other keys in other layers that do this, but the ESC key is supposed to be my "safe key" that gets me out of anywhere I might lose myself in. Pressing ESC many times is also fine in pretty much all situations, since even if I get into the `Base` layer, it's just mapped to _actual_ ESC, which doesn't really ever do anything destructive.
+The last "big thing" to note here (because it's common in other layers too) is that at this point, I've designated the ESC key as my "escape hatch" in all layers that could be considered "not transient". This key is mapped to `TO(1)` everywhere that is relevant, which brings you back to the `Base` layer. There are other keys in other layers that do this, but the ESC key is supposed to be my "safe key" that gets me out of anywhere I might lose myself in. Pressing ESC many times is also fine in pretty much all situations, since even if I get into the `Base` layer, it's just mapped to _actual_ ESC, which doesn't really ever do anything destructive.
 
 Other things to note here:
 
@@ -107,7 +107,7 @@ The rest of the layout should be fairly obvious, so I'm not going to enumerate a
 
 ![adjust layer](./3-adjust.png)
 
-I have the least to say about this layer. Note that we have the same "escape hatch", but all other keys remain the same as the default configuration. If you have any ideas what else I should put here, please let me know!
+I have the least to say about this layer. Note that we have the same "escape hatch", but all other keys remain the same as the default configuration. If you have any ideas as to what else I should put here, please let me know!
 
 ### The `NORMAL` Layer
 
@@ -320,7 +320,7 @@ There are already multiple things that I want to improve upon for this layout.
 
 - Add some more actions into the `Adjust` layer; I basically ignored it heavily because I couldn't think of anything, so this is ripe for improvement.
 - Come up with some more common Vim motions that I can accomplish without getting into macros; at a certain point, getting into macros will be inevitable, but using the GUI tool is so much easier than editing the keymap code (IMO) that I'm going to dread when I have to switch over.
-- Once I exhaust all available options to me in the UI, I want to start messing around with creating more complex [macros](https://docs.qmk.fm/#/feature_macros). There were a few chords/motions that I created that definitely could have been more cleanly defined via macros, and that's probably the next thing that I'd get around to messing aroun
+- Once I exhaust all available options to me in the UI, I want to start messing around with creating more complex [macros](https://docs.qmk.fm/#/feature_macros). There were a few chords/motions that I created that definitely could have been more cleanly defined via macros, and that's probably the next thing that I'd get around to messing with.
 - I want to investigate using [leader keys with QMK](https://beta.docs.qmk.fm/features/feature_leader_key). Especially coming from Spacemacs, this capability made me salivate; but I knew that it would be an unending hole of complexity and opportunities that I just avoided it altogether. Maybe the next time I have 5 solid days of playing around, I'll do it, but right now... nope.
 
 Anyway, that about wraps this up. For those of you that made it to the end, you get a virtual pat on the back, and permission to go and have a cookie!
