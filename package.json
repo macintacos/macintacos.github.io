@@ -13,6 +13,7 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
+    "gatsby": "^2.18.17",
     "gatsby-plugin-google-analytics": "^2.1.23",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-sitemap": "^2.2.21",
