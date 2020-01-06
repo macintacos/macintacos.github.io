@@ -1,23 +1,23 @@
-import chronoblogTheme from 'gatsby-theme-chronoblog/src/gatsby-plugin-theme-ui';
+import chronoblogTheme from "gatsby-theme-chronoblog/src/gatsby-plugin-theme-ui";
 
 export default {
   ...chronoblogTheme,
-  initialColorMode: 'light',
+  initialColorMode: "light",
   colors: {
     ...chronoblogTheme.color,
-    text: '#222',
-    background: '#fff',
-    link: '#25617b',
-    primary: '#f5cd79',
-    secondary: '#f7d794',
-    muted: '#f7f7f7',
+    text: "#222",
+    background: "#fff",
+    link: "#25617b",
+    primary: "#f5cd79",
+    secondary: "#f7d794",
+    muted: "#f7f7f7",
     modes: {
       ...chronoblogTheme.colors.modes,
       dark: {
         ...chronoblogTheme.colors.modes.dark,
-        text: '#eaeaea',
-        background: '#0e0f17',
-        muted: '#161b1d'
+        text: "#eaeaea",
+        background: "#0e0f17",
+        muted: "#161b1d"
       }
     }
   },
@@ -40,13 +40,13 @@ export default {
     ...chronoblogTheme.buttons,
     active: {
       ...chronoblogTheme.buttons.buttonStyle,
-      color: 'text'
+      color: "text"
     }
   },
   fonts: {
     ...chronoblogTheme.fonts,
-    body: '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif',
-    heading: 'inherit',
-    monospace: 'Menlo, monospace'
+    body: "-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif",
+    heading: "inherit",
+    monospace: "Menlo, monospace"
   }
 };
