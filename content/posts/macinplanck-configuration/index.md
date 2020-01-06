@@ -32,7 +32,7 @@ Some front-matter before I get into things:
 
 Here are links to my current configuration:
 
-- [Planck EZ Configurator (my current, full setup)](https://configure.ergodox-ez.com/planck-ez/layouts/K0rgz/OvZ4W/0)
+- [Planck EZ Configurator (my current, full setup)](https://configure.ergodox-ez.com/planck-ez/layouts/K0rgz/aWRG7/0)
 - [Relevant `.bin`, source, and PDF files](https://github.com/macintacos/dotfiles/tree/master/keebs/macinplanck-ez) for my current layout.
 
 ...and here are resources that I used to configure my setup:
